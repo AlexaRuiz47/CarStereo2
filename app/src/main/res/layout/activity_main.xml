@@ -6,13 +6,171 @@
     android:layout_height="match_parent"
     tools:context="com.example.lindseylavee.car2.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="1008dp"
+        android:layout_height="615dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="296dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RadioButton
+                    android:id="@+id/FMButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.32"
+                    android:text="FM"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/AMButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.37"
+                    android:text="AM"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/Station"
+                    android:layout_width="236dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.26"
+                    android:background="@android:color/holo_green_light"
+                    android:text="95.1"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="351dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VOLUME"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="20sp" />
+
+                <ProgressBar
+                    android:id="@+id/Volume_indicator "
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:background="@android:color/black"
+                    android:layout_weight="0.43" />
+
+                <SeekBar
+                    android:id="@+id/station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.31"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/radioname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Radio Station"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="245dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ToggleButton
+                    android:id="@+id/PowerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="Power"
+                    tools:text="Power"
+                    tools:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_light"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="-22dp">
+
+            <LinearLayout
+                android:layout_width="354dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/pause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pause" />
+
+                <Button
+                    android:id="@+id/Stop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stop" />
+
+                <Button
+                    android:id="@+id/Fastforward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fastforward" />
+
+                <Button
+                    android:id="@+id/repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat" />
+
+                <Button
+                    android:id="@+id/Eject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Eject " />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cdDisk"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                app:srcCompat="@android:drawable/bottom_bar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="600dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
 
 </android.support.constraint.ConstraintLayout>
